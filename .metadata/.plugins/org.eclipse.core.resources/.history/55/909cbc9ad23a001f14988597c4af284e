@@ -1,0 +1,9 @@
+package com.model.dao;
+
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import mybatis.factory.MybatisSqlSessionFactory;
+
+public class EmpDao {
+	private SqlSessionFactory sqlSessionFactory = MybatisSqlSessionFactory.getSqlSessionFactory();
+}

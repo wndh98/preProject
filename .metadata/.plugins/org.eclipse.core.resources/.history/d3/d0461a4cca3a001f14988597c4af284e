@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.basic.sql">
+  <select id="findByEmpno" resultType="object">
+    select * from emp where id = #{empno}
+  </select>
+  <select id="findAll" resultType="object">
+    select * from emp
+  </select>
+  <select id="findByName" resultType="object">
+    select * from emp where name = #{name}
+  </select>
+  <insert id="save" parameterType="com.model.dto.Emp">
+  	insert into emp values(#{empno},#{ename},#{job},#{mgr},#{hireDate},#{sal},#{comm},#{deptno},)
+  </insert>
+</mapper>

@@ -1,0 +1,5 @@
+package mybatis.factory;
+
+public class MybatisSqlSessionFactory {
+
+}

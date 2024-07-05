@@ -1,0 +1,22 @@
+package com.model.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
+import com.model.dto.Emp;
+
+import mybatis.factory.MybatisSqlSessionFactory;
+
+public class EmpDao {
+	private SqlSessionFactory sqlSessionFactory = MybatisSqlSessionFactory.getSqlSessionFactory();
+	
+	public List<Emp> getEmpList(){
+		try(SqlSession session = sqlSessionFactory.openSession(true)){
+			
+			session.findAll();
+		}
+		return null;
+	}
+} 
